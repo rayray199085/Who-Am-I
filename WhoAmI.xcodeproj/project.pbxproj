@@ -15,6 +15,8 @@
 		0D67939C220A34380038840E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D67939B220A34380038840E /* main.m */; };
 		0D6793A6220A34380038840E /* WhoAmITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6793A5220A34380038840E /* WhoAmITests.m */; };
 		0D6793B1220A34380038840E /* WhoAmIUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6793B0220A34380038840E /* WhoAmIUITests.m */; };
+		0D6793C3220A370C0038840E /* questions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D6793C2220A370C0038840E /* questions.plist */; };
+		0D6793C6220A47780038840E /* SCQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6793C5220A47780038840E /* SCQuestion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		0D6793AC220A34380038840E /* WhoAmIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhoAmIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D6793B0220A34380038840E /* WhoAmIUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhoAmIUITests.m; sourceTree = "<group>"; };
 		0D6793B2220A34380038840E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D6793C2220A370C0038840E /* questions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = questions.plist; sourceTree = "<group>"; };
+		0D6793C4220A47780038840E /* SCQuestion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCQuestion.h; sourceTree = "<group>"; };
+		0D6793C5220A47780038840E /* SCQuestion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCQuestion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,15 +106,14 @@
 		0D67938B220A34360038840E /* WhoAmI */ = {
 			isa = PBXGroup;
 			children = (
-				0D67938C220A34360038840E /* AppDelegate.h */,
-				0D67938D220A34360038840E /* AppDelegate.m */,
-				0D67938F220A34360038840E /* ViewController.h */,
-				0D679390220A34360038840E /* ViewController.m */,
-				0D679392220A34360038840E /* Main.storyboard */,
+				0D6793C1220A353F0038840E /* Others */,
+				0D6793C0220A35350038840E /* Controllers */,
+				0D6793BF220A35290038840E /* Views */,
+				0D6793BE220A351B0038840E /* Models */,
 				0D679395220A34380038840E /* Assets.xcassets */,
-				0D679397220A34380038840E /* LaunchScreen.storyboard */,
 				0D67939A220A34380038840E /* Info.plist */,
 				0D67939B220A34380038840E /* main.m */,
+				0D6793C2220A370C0038840E /* questions.plist */,
 			);
 			path = WhoAmI;
 			sourceTree = "<group>";
@@ -130,6 +134,42 @@
 				0D6793B2220A34380038840E /* Info.plist */,
 			);
 			path = WhoAmIUITests;
+			sourceTree = "<group>";
+		};
+		0D6793BE220A351B0038840E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0D6793C4220A47780038840E /* SCQuestion.h */,
+				0D6793C5220A47780038840E /* SCQuestion.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		0D6793BF220A35290038840E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0D679397220A34380038840E /* LaunchScreen.storyboard */,
+				0D679392220A34360038840E /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		0D6793C0220A35350038840E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0D67938F220A34360038840E /* ViewController.h */,
+				0D679390220A34360038840E /* ViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		0D6793C1220A353F0038840E /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				0D67938C220A34360038840E /* AppDelegate.h */,
+				0D67938D220A34360038840E /* AppDelegate.m */,
+			);
+			name = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +234,7 @@
 		0D679381220A34360038840E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SC;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Stephen Cao";
 				TargetAttributes = {
@@ -235,6 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D6793C3220A370C0038840E /* questions.plist in Resources */,
 				0D679399220A34380038840E /* LaunchScreen.storyboard in Resources */,
 				0D679396220A34380038840E /* Assets.xcassets in Resources */,
 				0D679394220A34360038840E /* Main.storyboard in Resources */,
@@ -263,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D679391220A34360038840E /* ViewController.m in Sources */,
+				0D6793C6220A47780038840E /* SCQuestion.m in Sources */,
 				0D67939C220A34380038840E /* main.m in Sources */,
 				0D67938E220A34360038840E /* AppDelegate.m in Sources */,
 			);
